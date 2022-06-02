@@ -41,5 +41,5 @@ jobs:
     
     steps:
     - name: Print Hello World Windows
-      run: echo "Hello World Rodando no Windows"
+      run: echo 'Hello World Rodando no Windows'
     
