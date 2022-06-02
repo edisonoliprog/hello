@@ -39,7 +39,7 @@ jobs:
   hello_world_windows:
     runs-on: windows-lastest
     
-    steps:
-    - name: Print Hello World Windows
-      run: echo 'Hello World Rodando no Windows'
+      steps:
+      - name: Print Hello World Windows
+        run: echo 'Hello World Rodando no Windows'
     
