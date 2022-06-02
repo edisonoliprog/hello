@@ -39,7 +39,13 @@ jobs:
   hello_world_windows:
     runs-on: windows-lastest
     
-      steps:
+    steps:
       - name: Print Hello World Windows
         run: echo 'Hello World Rodando no Windows'
     
+  hello_world_macos:
+    runs-on: windows-lastest
+    
+    steps:
+      - name: Print Hello World Macos
+        run: echo 'Hello World Rodando no Macos'
