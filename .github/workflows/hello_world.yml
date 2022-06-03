@@ -6,9 +6,11 @@ name: hello world
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
-    branches: [ main ]
+    branches: 
+    - main
+    - develop
   pull_request:
-    branches: [ main ]
+    branches: [ master ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -16,7 +18,7 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  hello_world:
+  helloworld-ubuntu:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
@@ -36,16 +38,17 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
 
-  hello_world_windows:
+  hello-world-windows:
+    name: hello-world-windows
     runs-on: windows-lastest
     
     steps:
-      - name: Print Hello World Windows
+      - name: print hello horld windows
         run: echo 'Hello World Rodando no Windows'
     
-  hello_world_macos:
+  hello-world-macos:
     runs-on: windows-lastest
-    
+    needs: [helloworld-ubuntu, hello-world-windows]
     steps:
       - name: Print Hello World Macos
         run: echo 'Hello World Rodando no Macos'
